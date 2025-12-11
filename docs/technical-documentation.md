@@ -48,6 +48,7 @@ docs/technical-documentation.md This file
 - Static site hosted from repo root; compatible with GitHub Pages/Netlify (no build step, output dir `.`).
 - Uses only HTTPS APIs (Quotable, GitHub), so it is safe behind Pages/Netlify defaults.
 - Keep asset paths relative (`css/styles.css`, `js/script.js`, `assets/`).
+- Live Netlify deployment: https://coptrzpersonal.netlify.app/
 
 ## Accessibility
 - Semantic sections and headings.
@@ -60,5 +61,6 @@ docs/technical-documentation.md This file
 - Toggle filters/sorts and refresh to confirm saved preferences.
 - Try contact form while signed out (blocked) vs. signed in (validates and succeeds).
 - Check mobile viewport (<=640px) to confirm layout remains usable; header nav collapses by design.
+- Run through Chrome/Edge/Firefox (desktop + mobile viewport emulation) for compatibility; add Safari/iOS verification before delivery if available.
 ## Reflection
 - Through this assignment, I learned how to use APIs with JavaScript, manage browser state, and debug errors more effectively.

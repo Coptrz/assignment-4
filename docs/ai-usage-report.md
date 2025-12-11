@@ -11,7 +11,19 @@ Document every AI interaction for this assignment: tool, prompt, output, edits, 
 - **What I learned:**  
 
 ## Current Log
-- **ChatGPT:** Brainstormed APIs/features (GitHub repos, quotes widget), then rewrote logic in vanilla JS. Tightened README/technical wording to match the build. Reviewed validation edge cases (email pattern, short messages) and simulated auth UX.
+- **Tool:** ChatGPT  
+  **Prompt / request:** Brainstorm API-driven widgets and stateful UX for the portfolio (GitHub repos, quotes, saved filters/theme/auth) and outline validation rules.  
+  **AI output (summary):** Suggested GitHub REST widget with empty/error/timeout states, quote widget with retry, and persisted filters/sort/theme/auth; outlined validation rules for contact form.  
+  **My edits:** Implemented all logic in vanilla JS, adjusted timeouts, simplified DOM updates, and tailored copy to assignment tone.  
+  **Why I kept/changed it:** Kept the feature set to meet rubric (API, state, error handling); rewrote for my structure and to avoid extra dependencies.  
+  **What I learned:** Structuring state with `localStorage`, grouping DOM updates for performance, and designing friendlier error/empty states.
+
+- **Tool:** ChatGPT  
+  **Prompt / request:** Add offline-friendly behavior to the quote widget and clean up deployment instructions with Netlify + GitHub Pages details.  
+  **AI output (summary):** Recommended fallback messages/quotes and clearer deploy steps with live link placement.  
+  **My edits:** Added local fallback quotes with status text, kept fetch timeout, rewrote README deploy section with Netlify URL and cleaned GitHub Pages steps.  
+  **Why I kept/changed it:** Needed graceful degradation when the API is blocked and clearer docs for submission; simplified wording to stay concise.  
+  **What I learned:** How to provide a non-network fallback without confusing status text; clearer deploy docs reduce reviewer friction.
 
 ## Benefits Observed
 - Faster planning for rubric-friendly features (API integration, complex logic, state management).
