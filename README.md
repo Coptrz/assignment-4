@@ -38,7 +38,8 @@ assignment-4/
 |  |- ai-usage-report.md
 |  |- technical-documentation.md
 |- presentation/
-|  |- README.md   (instructions for slides/video)
+|  |- slides.pdf
+|  |- demo-video
 |- .gitignore
 ```
 
