@@ -38,6 +38,13 @@
   const statusEl = document.getElementById('apiStatus');
   const quoteEl = document.getElementById('apiQuote');
   const retryBtn = document.getElementById('apiRetry');
+  const fallbackQuotes = [
+    '"Success is the sum of small efforts, repeated day in and day out." - Robert Collier',
+    '"Do what you can, with what you have, where you are." - Theodore Roosevelt',
+    '"The future depends on what you do today." - Mahatma Gandhi',
+    '"Action is the foundational key to all success." - Pablo Picasso',
+    '"Quality is not an act, it is a habit." - Aristotle',
+  ];
 
   const state = {
     sessionStart: Date.now(),
@@ -48,7 +55,7 @@
     projectLevel: localStorage.getItem('projectLevel') || 'all',
     projectSort: localStorage.getItem('projectSort') || 'date-desc',
     auth: localStorage.getItem('auth') || 'guest',
-    githubUser: localStorage.getItem('githubUser') || 'octocat',
+    githubUser: localStorage.getItem('githubUser') || 'coptrz',
   };
 
   // ===== Basics =====
@@ -225,9 +232,11 @@
       statusEl.textContent = 'Loaded';
       statusEl.classList.remove('loading');
     } catch (err) {
-      statusEl.textContent = "Couldn't load a quote. Check your connection and click Try another.";
+      const fallback = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+      quoteEl.textContent = fallback;
+      quoteEl.classList.remove('hidden');
+      statusEl.textContent = 'Showing an offline quote instead.';
       statusEl.classList.remove('loading');
-      quoteEl.classList.add('hidden');
     }
   }
   if (retryBtn) retryBtn.addEventListener('click', fetchQuote);
@@ -286,7 +295,7 @@
   if (githubInput) githubInput.value = state.githubUser;
   repoForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const val = githubInput?.value || 'octocat';
+    const val = githubInput?.value || 'coptrz';
     state.githubUser = val;
     localStorage.setItem('githubUser', val);
     fetchRepos(val);
