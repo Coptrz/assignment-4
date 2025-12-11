@@ -39,7 +39,7 @@ assignment-4/
 |  |- technical-documentation.md
 |- presentation/
 |  |- slides.pdf
-|  |- demo-video
+|  |- demo-video.pdf
 |- .gitignore
 ```
 
