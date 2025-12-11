@@ -2,7 +2,7 @@
 
 Document every AI interaction for this assignment: tool, prompt, output, edits, and what I learned. Add new entries below the template.
 
-## Quick Template (copy per AI use)
+## Quick Template (used for this phase)
 - **Tool:**  
 - **Prompt / request:**  
 - **AI output (summary):**  
