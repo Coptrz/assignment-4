@@ -25,6 +25,11 @@ Document every AI interaction for this assignment: tool, prompt, output, edits, 
   **Why I kept/changed it:** Needed graceful degradation when the API is blocked and clearer docs for submission; simplified wording to stay concise.  
   **What I learned:** How to provide a non-network fallback without confusing status text; clearer deploy docs reduce reviewer friction.
 
+- **Tool:** Gamma AI  
+  **Prompt / request:** Long prompts back and forth, to generate the presentation slides.
+  **AI output (summary):** Generated a long sildes with uneeded stuff, week coloring, and empty phases.
+  **My edits:** edited almost everything except small details and pictures.
+  **What I learned:** Only used Gamma to get use of time, pictures generation and explore AIs.
 ## Benefits Observed
 - Faster planning for rubric-friendly features (API integration, complex logic, state management).
 - Reminders on accessibility, error handling, and empty/timeout states.
